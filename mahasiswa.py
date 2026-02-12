@@ -39,8 +39,29 @@ mhs1.info_lulus() #Cek IPK mhs1
 """
 1. Kenapa kita perlu untuk memanggil self. pada setiap atribut dan method di dalam kelas?
     Jawaban: Karena self adalah data yang terikat pada objek kelas. bukan data umum
-    
+    ~
 -self → menunjuk ke object itu sendiri
 -self.ipk → data yang disimpan di dalam object
 -Tanpa self → bukan bagian dari object
+
+2. Apa itu __init__?
+__init__ adalah fungsi khusus yang otomatis dijalankan saat Anda membuat objek baru. 
+Fungsinya adalah menginisialisasi (menyiapkan) data awal untuk objek tersebut.
         """
+#Contoh penggunaan __init__:
+class Siswa:
+    def __init__(self, nama, ips):
+        self.nama = nama
+        self.ips = ips
+
+# Saat Anda membuat objek, __init__ langsung jalan
+siswa1 = Siswa("Budi", 3.5)
+# __init__ otomatis dipanggil dengan nama="Budi", ips=3.5
+
+#tanpa init__, Anda harus mengatur data secara manual setelah membuat objek, seperti ini:
+class Siswa:
+    pass
+
+siswa1 = Siswa()
+siswa1.nama = "Budi"  # ❌ Repot, harus manual
+siswa1.ips = 3.5      # ❌ Repot, harus manual

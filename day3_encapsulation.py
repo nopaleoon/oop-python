@@ -42,12 +42,34 @@ Mengontrol bagaimana data boleh diakses dan diubah.
 print()
 
 
+#latihan
+class Siswa:
+    def __init__(self, nama, asal_sekolah):
+        self.nama = nama
+        self.asal_sekolah = asal_sekolah
+        self.__rata2_nilai_raport = 0.0
+        
+    def input_nilai(self, nilai):
+        if nilai < 0 or nilai > 100:
+            print("Nilai harus antara 0 - 100")
+        else:
+            self.__rata2_nilai_raport = nilai
+            print("Nilai Berhasil Ditambahkan")
+        
+    def lihat_nilai(self):
+        return self.__rata2_nilai_raport
+        
+    def status_kelulusan(self, min_nilai=75):
+        if self.__rata2_nilai_raport < min_nilai:
+            print(f"{self.nama} WAJIB melakukan remedial")
+        else:
+            print(f"Selamat kepada {self.nama}, Anda dinyatakan LULUS")
+            
+siswa1 = Siswa("Bimo", "SMA 1 Kendal")
 
-
-
-
-
-
+siswa1.input_nilai(90)
+print(f"Rata-rata Nilai Raport: {siswa1.lihat_nilai()}")
+siswa1.status_kelulusan()
 
 
 

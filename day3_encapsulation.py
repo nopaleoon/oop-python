@@ -70,9 +70,3 @@ siswa1 = Siswa("Bimo", "SMA 1 Kendal")
 siswa1.input_nilai(90)
 print(f"Rata-rata Nilai Raport: {siswa1.lihat_nilai()}")
 siswa1.status_kelulusan()
-
-
-
-
-
-

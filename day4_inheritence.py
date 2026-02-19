@@ -25,3 +25,32 @@ mhs1 = Mahasiswa("Naufal", 19, "L200250046")
 
 mhs1.perkenalan()     # method dari parent , tampil saya mahasiswa
 mhs1.info_mahasiswa() # method dari child
+
+print()
+
+# Latian mandiri
+class Kendaraan:
+    def __init__(self, merk, tahun):
+        self.merk = merk
+        self.tahun = tahun
+        
+    def info(self):
+        print(f"Merk : {self.merk}")
+        print(f"Tahun : {self.tahun}")
+        
+        
+class Mobil(Kendaraan):
+    def __init__(self, merk, tahun, jumlah_pintu):
+        super().__init__(merk, tahun)
+        self.jumlah_pintu = jumlah_pintu
+            
+    def info(self):
+        print(f"Mobil {self.merk} tahun {self.tahun} mempunyai {self.jumlah_pintu} pintu")
+        
+    def bunyi_klakson(self):
+        print(f"Bunyi {self.merk} : Tin!.... tin!")
+    
+    
+Zenix = Mobil("InnovaZenix", 2017, 4)
+Zenix.info()
+Zenix.bunyi_klakson()

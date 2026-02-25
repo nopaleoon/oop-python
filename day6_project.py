@@ -53,3 +53,6 @@ l2.ram = 16
 print(l1.ram)
 print(l2.ram)
 
+#note
+#urutan pencarian attribute di python
+"""Instance → Class → Parent class"""

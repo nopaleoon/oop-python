@@ -56,3 +56,23 @@ print(l2.ram)
 #note
 #urutan pencarian attribute di python
 """Instance → Class → Parent class"""
+
+#tebak output berikut ini (source : gpt)
+class Laaptop:
+    ram = 8
+
+    def __init__(self, merk):
+        self.merk = merk
+
+
+l1 = Laaptop("Asus")
+l2 = Laaptop("Lenovo")
+l1.ram = 16
+Laaptop.ram = 32
+
+"""aturan emas:
+Kalau instance sudah punya attribute sendiri, perubahan di class tidak mempengaruhi dia.
+"""
+
+print(l1.ram)
+print(l2.ram)

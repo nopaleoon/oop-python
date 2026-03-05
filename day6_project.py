@@ -72,6 +72,9 @@ Laaptop.ram = 32
 
 """aturan emas:
 Kalau instance sudah punya attribute sendiri, perubahan di class tidak mempengaruhi dia.
+
+l1.ram = 16        (instance attribute)
+Laaptop.ram = 32     (class attribute)
 """
 
 print(l1.ram)
